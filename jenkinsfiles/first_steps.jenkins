@@ -14,5 +14,9 @@ pipeline {
         sh 'hostname'
       }
     }
+    stage('Build Release from Tag') {
+        when {
+          tag 'Release*'
+        }
   }
 }
