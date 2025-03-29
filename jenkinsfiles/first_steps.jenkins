@@ -1,0 +1,18 @@
+#!groovy
+properties([disableConcurrentBuilds()])
+
+pipeline {
+    agent {
+      lable 'master'
+      }
+    eoptions {
+      timestamps()
+  }
+  stages {
+    stage("First step") {
+      steps {
+        sh '\'hosthame\''
+      }
+    }
+  }
+}
