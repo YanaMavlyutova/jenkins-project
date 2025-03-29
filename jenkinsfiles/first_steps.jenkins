@@ -3,15 +3,15 @@ properties([disableConcurrentBuilds()])
 
 pipeline {
     agent {
-      lable 'main'
-      }
+       label 'master'
+       }
     options {
       timestamps()
   }
   stages {
     stage("First step") {
       steps {
-        sh '\'hosthame\''
+        sh 'hostname'
       }
     }
   }
