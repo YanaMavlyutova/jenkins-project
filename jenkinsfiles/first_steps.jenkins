@@ -3,9 +3,9 @@ properties([disableConcurrentBuilds()])
 
 pipeline {
     agent {
-      lable 'master'
+      lable 'main'
       }
-    eoptions {
+    options {
       timestamps()
   }
   stages {
