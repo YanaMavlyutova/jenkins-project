@@ -1,4 +1,3 @@
-CODE_CHANGES = getGitChanges()
 pipeline {
    agent any
    parameters {
@@ -17,9 +16,6 @@ pipeline {
          }
       }
       stage("test") {
-         when {
-            params.executeTests == true
-         }
          steps {
             echo "testing the application"
          }
@@ -29,17 +25,6 @@ pipeline {
             echo "deploying the application"
             echo "deploying version ${params.VERSION}"
          }
-      }
-   }
-   post {
-      always {
-         // 
-      }
-      success {
-         //
-      }
-      failure {
-         //
       }
    }
 }
